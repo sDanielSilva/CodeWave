@@ -38,6 +38,12 @@ O CodeWave foi concebido para:
    
 --- 
 
+## 📝 Documentação
+
+Veja o relatório completo: [**Relatório Codewave**](CodeWave.pdf) para mais detalhes.
+
+---
+
 ## 🤝 Colaboradores
 
 Colaboradores que fizeram parte deste projeto:
@@ -94,8 +100,3 @@ Colaboradores que fizeram parte deste projeto:
     </td>
   </tr>
 </table>
-
-## 📝 Documentação
-
-Veja o arquivo [Documentação](documentacao.md) para mais detalhes.
-Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
