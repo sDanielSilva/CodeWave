@@ -1,0 +1,116 @@
+.tabs {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.tab-header {
+  display: flex;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 20px;
+}
+
+.tab.active {
+  background-color: #4e8af9;
+  color: #ffffff;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+}
+
+.tab-content.active {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+  font-weight: bold;
+  width: calc(100% / 3);
+}
+
+table input {
+  width: 100%;
+  border: none;
+  text-align: center;
+}
+
+#enc {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+  font-weight: bold;
+  color: red;
+}
+
+th {
+  background-color: #4e8af9;
+  color: #ffffff;
+}
+
+.botao-guardar {
+  display: block;
+  width: 80%;
+  height: 50px;
+  margin: 20px auto;
+  background-color: #4e8af9;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.botao-guardar:hover {
+  background-color: #3c7cd7;
+}
+
+/* Estilos para o contêiner de notificação */
+#notificationContainer {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  position: fixed; /* Fixa o contêiner no ecrã */
+  top: 7.5%; /* Posiciona no meio do ecrã verticalmente */
+  left: 57.5%; /* Posiciona no meio da ecrã horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta a posição exata do contêiner */
+  z-index: 1000; /* Garante que está acima de outros elementos */
+  width: auto; /* Ou uma largura específica se necessário */
+}
+
+#notificationMessage {
+  text-align: center; /* Centraliza o texto dentro do contêiner */
+  padding: 10px 20px;
+  background-color: #f8f9fa; /* Cor de fundo da notificação */
+  border: 1px solid #ddd; /* Borda opcional */
+  border-radius: 5px; /* Bordas arredondadas */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra opcional */
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compra Efetuada com Sucesso</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .container {
+        text-align: center;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .container h1 {
+        color: #3b81f6;
+      }
+      .container p {
+        color: #333;
+      }
+      .container a {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #3b81f6;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      .container a:hover {
+        background-color: #3b81f6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Compra Efetuada com Sucesso!</h1>
+      <p>
+        Obrigado por sua compra. Por favor, verifique seu e-mail para mais
+        detalhes.
+      </p>
+      <p>Você será redirecionado em breve...</p>
+      <a href="index.php">Voltar para a Página Inicial</a>
+    </div>
+    <script>   
+        setTimeout(function() {
+            window.location.href = "index.php";
+        }, 5000); 
+    </script>
+  </body>
+</html>

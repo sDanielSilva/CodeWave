@@ -1,0 +1,135 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+#weather-section {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 50px;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 50%;
+  scroll-behavior: smooth;
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  margin-right: 16px;
+  scroll-snap-align: start;
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  background: #fff;
+  color: #333;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.carousel-item:hover {
+  transform: scale(1.05);
+}
+
+.carousel-item.active {
+  border: 2px solid #007bff;
+  background-color: #e3f2fd;
+}
+
+#prevBtn,
+#nextBtn {
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  color: #007bff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  scale: 1.5;
+}
+
+#prevBtn:hover,
+#nextBtn:hover {
+  color: #0056b3;
+  scale: 1.75;
+}
+
+#prevBtnHourly,
+#nextBtnHourly {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 2em;
+  color: #007bff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  scale: 1;
+}
+
+#prevBtnHourly:hover,
+#nextBtnHourly:hover {
+  color: #0056b3;
+  scale: 1.25;
+}
+
+#hourly-weather {
+  margin-top: 50px;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+}
+
+#hourly-weather.open {
+  display: block;
+  opacity: 1;
+}
+
+.hourly-weather-item {
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+.hourly-weather-item:hover {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+}

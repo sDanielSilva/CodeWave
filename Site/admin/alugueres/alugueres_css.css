@@ -1,0 +1,24 @@
+.modal-content {
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.modal-backdrop {
+  backdrop-filter: blur(5px);
+}
+
+.btn {
+  height: 37px;
+}
+
+.error {
+  font-size: 1em;
+  width: 466px;
+  color: red;
+  border-color: red;
+}
+
+#confirmationModal .modal-content {
+  height: 227px;
+}

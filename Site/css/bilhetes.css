@@ -1,0 +1,89 @@
+.lead{ 
+    margin-top: 3%;
+}
+
+.card p{
+    font-size: 17px;
+}
+
+.card-footer p{
+    font-size: 18px;
+}
+
+.ticket-minus,.ticket-plus {
+    font-size: 22px;
+}
+
+.btn-lg{
+    font-size: 20px;
+}
+
+.justify-content-center {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .row {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+
+ #resumo-compra td {
+    font-size: 18px; 
+  }
+
+  .table th {
+    font-size: 20px;
+ 
+  }
+
+
+
+  div.col-md-3.text-center input {
+    font-size: 18px;
+}
+
+.card-header,
+.card-body,
+.card-footer {
+    border: 2px solid #ccc; 
+    border-radius: 10px; 
+    padding: 10px;
+}
+
+/* Estilo dos inputs tipo radio */
+input[type="radio"] {
+  -webkit-appearance: none; /* Remove a aparência padrão do browser */
+  -moz-appearance: none;
+  appearance: none;
+  width: 50px; /* Largura da bola */
+  height: 50px; /* Altura da bola */
+  border-radius: 50%; /* Faz a borda do input ser circular */
+  border: 2px solid #3bc0d8; /* Adiciona uma borda */
+  outline: none; /* Remove o contorno padrão do browser */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+/* Estilo dos inputs tipo radio quando estão selecionados */
+input[type="radio"]:checked {
+  background-color: #3bc0d8; /* Define a cor de fundo quando é selecionado */
+  border-color: #3bc0d8; /* Define a cor da borda quando é selecionado */
+}
+
+/* Estilo dos botões selecionados de rádio */
+.btn-group-spaced {
+  display: flex;
+  align-items: center; /* Alinha o conteúdo verticalmente */
+  justify-content: center; /* Alinha o conteúdo horizontalmente */
+}
+
+.btn-group-spaced input[type="radio"] {
+  margin-right: 10px; /* Espaço entre os botões */
+}
+
+.btn-group-spaced label {
+  margin: 0; /* Remove margem padrão */
+}
+

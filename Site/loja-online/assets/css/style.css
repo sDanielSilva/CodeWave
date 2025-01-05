@@ -1,0 +1,175 @@
+section.main {
+    position: relative;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#home {
+    z-index: 9;
+}
+
+.popup {
+    position: fixed;
+    bottom: 23px;
+    right: 90px;
+    background-color: #3b81f6;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: none;
+    z-index: 9999;
+    opacity: 0;
+    animation: slideInFromRight 0.5s ease forwards;
+}
+
+.popup::after {
+    content: '';
+  position: absolute;
+  top: 50%;
+  right: -17px;
+  transform: translateY(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent #3b81f6;
+}
+
+@keyframes slideInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutToRight {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+.destaque-bilhetes {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 350px;
+    height: 160px;
+    background-color: #3b81f6;
+    border-top-right-radius: 100%; 
+    text-align: center;
+    line-height: 200px;
+    color: white;
+    font-size: 24px; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+    text-decoration: none;
+    z-index: 99999;
+    overflow: hidden;
+    display: flex;
+}
+
+.destaque-bilhetes img {
+    width: 80px; /* Largura da imagem */
+    height: auto; /* Altura automática para manter a proporção */
+    margin-right: 15px; /* Espaçamento à direita da imagem */
+    margin-left: 20px;
+    margin-top: 20px;
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 150px; /* Largura fixa do dropdown */
+    padding: 10px; /* Espaçamento interno */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    white-space: nowrap; /* Impede que o texto seja quebrado em várias linhas */
+    overflow-x: hidden; /* Oculta a barra de rolagem horizontal */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 6px 12px; /* Espaçamento interno menor */
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.btn_loc {
+    position: absolute;
+    background-color: #3bc0d8;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    padding: 10px 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    border-radius: 25px;
+    color: white;
+}
+
+.rounded-circle {
+    width: 350px; /* Defina o tamanho desejado para as imagens */
+    height: 350px; /* Defina o tamanho desejado para as imagens */
+    object-fit: cover; /* Garante que a imagem seja redimensionada para preencher o círculo */
+}
+
+.novo-badge {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.botao-falar:hover::after {
+    content: "Pressione para falar";
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    background-color: #fff;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px;
+}

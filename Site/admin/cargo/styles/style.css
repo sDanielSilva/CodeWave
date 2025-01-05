@@ -1,0 +1,29 @@
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor do overlay semitransparente */
+    backdrop-filter: blur(5px); /* Aplica o efeito de blur */
+    z-index: 999; /* Garante que o overlay está na frente de todos os outros elementos */
+}
+
+#modalFormulario {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Garante que o modal está na frente do overlay */
+}
+
+#confirm-delete-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor do overlay semitransparente */
+    backdrop-filter: blur(5px); /* Aplica o efeito de blue */
+    z-index: 999; /* Garante que o overlay está na frente de todos os outros elementos */
+}

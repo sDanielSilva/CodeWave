@@ -1,0 +1,51 @@
+.titulo-restauracao {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Botões container */
+.btn-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Seção de restauração */
+#restauracao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Container de imagens */
+#menu-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px; 
+    padding-bottom: 20px;
+}
+
+/* Estilo para cada imagem */
+.image-link {
+    display: block;
+    margin: 10px;
+    text-align: center;
+}
+
+.image-link img {
+    width: 250px; 
+    height: 250px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+.image-table p {
+    font-size: 18px;
+    text-align: center;
+}

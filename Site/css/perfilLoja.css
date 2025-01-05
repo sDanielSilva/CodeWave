@@ -1,0 +1,34 @@
+ /* Estilos para o contêiner flexível */
+ .container2 {
+    display: flex;
+    margin: 0;
+}
+/* Estilos para a navegação vertical */
+.nav-container2 {
+    flex-shrink: 0;
+    width: 280px;
+    height: 100vh;
+    background-color: #f8f9fa;
+
+}
+/* Estilos para o conteúdo ao lado */
+.content2 {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.valido {
+    border: 2px solid green;
+  }
+  
+.invalido {
+    border: 2px solid red;
+  }
+
+
+.compra-card {
+    border: 2px solid black; /* Adiciona borda a negrito */
+    border-radius: 10px; /* Adiciona bordas redondas */
+    padding: 10px; /* Adiciona algum espaço ao redor */
+    margin-bottom: 20px; /* Adiciona espaço entre cada compra */
+  }

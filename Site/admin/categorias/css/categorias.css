@@ -1,0 +1,16 @@
+#dataTable th {
+    text-align: center;
+}
+
+#pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  #pagination .btn {
+    margin: 0 5px;
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+

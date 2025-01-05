@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CodeWave | Login</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/1.png" />
+
+    <!-- * Font Icon -->
+    <link
+      rel="stylesheet"
+      href="assets/fonts/material-icon/css/material-design-iconic-font.min.css"
+    />
+    <!-- * Main css -->
+    <link rel="stylesheet" href="assets/css/style2.css" />
+  </head>
+  <style>
+    body {
+      overflow: hidden;
+    }
+    .main,
+    body {
+      background-image: url(assets/img/background_logo.jpg);
+    }
+  </style>
+  <body>
+    <div class="main">
+      <!-- TODO: Login -->
+      <section class="sign-in">
+        <div class="container">
+          <div class="signin-content">
+            <div class="signin-image">
+              <figure>
+                <img src="assets/img/codewave_logo.png" alt="sing up image" />
+              </figure>
+            </div>
+            <div class="signin-form">
+              <h2 class="form-title">Entrar</h2>
+              <form
+                method="POST"
+                action="login.php"
+                class="register-form"
+                id="login-form"
+              >
+                <div class="form-group">
+                  <label for="your_name"
+                    ><i class="zmdi zmdi-account material-icons-name"></i
+                  ></label>
+                  <input
+                    type="text"
+                    name="your_name"
+                    id="your_name"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                  <input
+                    type="password"
+                    name="your_pass"
+                    id="your_pass"
+                    placeholder="Password"
+                    required
+                  />
+                </div>
+                <div
+                  id="error-message"
+                  style="color: red; margin-bottom: 10px"
+                ></div>
+                <a href="criar-conta.html" class="signup-image-link"
+                  >Criar uma conta!</a
+                >
+                <input type="hidden" name="redirectURL" id="redirectURL" />
+                <div class="form-group form-button">
+                  <input
+                    type="submit"
+                    name="signin"
+                    id="signin"
+                    class="form-submit"
+                    value="Entrar"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- * Jquery.js -->
+    <script src="assets/jquery/jquery.min.js"></script>
+    <script>
+      window.onload = function () {
+        var redirectURL = sessionStorage.getItem("redirectURL");
+        if (redirectURL) {
+          document.getElementById("redirectURL").value = redirectURL;
+        }
+      };
+
+      // Função para limpar os campos do formulário
+      function clearFormFields() {
+        document.getElementById("your_name").value = "";
+        document.getElementById("your_pass").value = "";
+      }
+
+      // Função para exibir a mensagem de erro
+      function displayErrorMessage(message) {
+        var errorMessageElement = document.getElementById("error-message");
+        if (errorMessageElement) {
+          errorMessageElement.innerText = message;
+        }
+      }
+
+      // Função para processar a resposta do servidor
+      function handleResponse(response) {
+        if (response.success === false) {
+          // Se houver um erro, exibe a mensagem de erro
+          displayErrorMessage(response.error_message);
+          // Limpa os campos do formulário
+          clearFormFields();
+        } else {
+          // Se a autenticação for bem-sucedida, redireciona para a página desejada
+          window.location.href = response.redirectURL;
+        }
+      }
+
+      // Manipula o envio do formulário
+      document
+        .getElementById("login-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Impede o envio padrão do formulário
+
+          // Envia uma solicitação AJAX para o servidor
+          var xhr = new XMLHttpRequest();
+          xhr.open("POST", "login.php", true);
+          xhr.setRequestHeader(
+            "Content-Type",
+            "application/x-www-form-urlencoded"
+          );
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+              if (xhr.status === 200) {
+                // Processa a resposta do servidor
+                console.log("Resposta do servidor:", xhr.responseText); // Log para o debugging
+                try {
+                  var response = JSON.parse(xhr.responseText);
+                  if (response.success) {
+                    window.location.href = response.redirect_url;
+                  } else {
+                    displayErrorMessage(response.error_message);
+                  }
+                } catch (e) {
+                  console.error("Erro ao analisar JSON:", e);
+                  displayErrorMessage(
+                    "A resposta do servidor não é um JSON válido."
+                  );
+                }
+              } else {
+                // Exibe mensagem de erro genérica se ocorrer um erro de solicitação
+                displayErrorMessage(
+                  "Ocorreu um erro. Por favor, tente novamente."
+                );
+              }
+            }
+          };
+
+          // Obtem os dados do formulário
+          var formData = new FormData(document.getElementById("login-form"));
+          // Envia os dados do formulário
+          xhr.send(new URLSearchParams(formData));
+        });
+    </script>
+  </body>
+</html>
