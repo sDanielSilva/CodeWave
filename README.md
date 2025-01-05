@@ -1,37 +1,42 @@
-# Projeto Temático em Aplicações Web
-
 <p align="center">
   <img src="img/codewave_logo_sfundo.png" alt="Capa do projeto" width="300px">
 </p>
 
-> O projeto é um website temático para um parque aquático chamado "CodeWave". Proporciona aos visitantes uma plataforma online abrangente para acessar informações sobre o parque, comprar bilhetes, efetuar reservas e adquirir produtos relacionados. O website conta com uma área de administração que permiti o controle da loja online e a gestão do site. O site é uma plataforma web dinâmica e interativa que atenda às necessidades dos visitantes do parque aquático, proporcionando uma experiência de utilizador otimizada e simplificada. O projeto também inclui a possibilidade de integração com dispositivos Arduino para controlar sensores e outros dispositivos, embora essa integração seja apenas uma ideia complementar e não o foco principal do projeto.
+---
 
-### Ajustes e melhorias
+**CodeWave: Plataforma Web para Gestão de Parques Aquáticos**
 
-O projeto está em desenvolvimento, e estão a ser realizadas as seguintes tarefas:
+Este repositório contém o projeto **CodeWave**, desenvolvido no âmbito do **Módulo Temático em Aplicações Web** da Licenciatura em Tecnologias da Informação na **Universidade de Aveiro - ESTGA**. O CodeWave é uma solução completa para a gestão e interação digital de um parque aquático, com foco na experiência dos visitantes e na eficiência operacional do parque.
 
-- [x] Tema do projeto
-- [ ] Fase I - Planeamento do Projeto
-- [ ] Fase II - Desenho do Sistema
-- [ ] Fase III - Implementação
-- [ ] Desenvolvimento da aplicação
-- [ ] Testes e debug
-- [ ] Análise de resultados e documentação
-- [ ] Conclusões
+### **Objetivos**
+O CodeWave foi concebido para:
+- **Melhorar a eficiência operacional**: Agilizar processos como compra de bilhetes, reservas e gestão de recursos do parque.
+- **Aumentar a satisfação do cliente**: Oferecer uma interface intuitiva com informações claras e funcionalidades úteis, como mapas interativos, loja online e agendamento de eventos.
+- **Facilitar a gestão**: Proporcionar ferramentas robustas para administradores, desde a monitorização de bilhetes até relatórios detalhados de estatísticas.
 
+### **Principais Funcionalidades**
+- **Compra de bilhetes e produtos**: Integração de carrinho de compras e gestão de inventário.
+- **Mapas interativos**: Navegação pelo parque com informações detalhadas das atrações.
+- **Reservas e alugueres**: Gestão simplificada de equipamentos, eventos e alojamentos.
+- **Painel de administração**: Controlo de operações do parque, incluindo relatórios e gestão de utilizadores.
+- **Notificações inteligentes**: Alertas sobre eventos e condições meteorológicas.
+- **Integração IoT**: Controlo de iluminação e monitorização ambiental via Arduino.
 
-## 📫 Contribuir para <Aplicação - CodeWave>
+### **Tecnologias Utilizadas**
+- **Frontend**: HTML, CSS e JavaScript.
+- **Backend**: PHP para lógica de servidor e integração com base de dados.
+- **Base de Dados**: PostgreSQL.
+- **Outras Ferramentas**: Arduino, UML, Git e Bootstrap.
 
-Para contribuir com <Aplicação - CodeWave>, siga estas etapas:
-
-<b>No seu terminal, ou no seu IDE, faça os seguintes comandos.</b>
-1. `git clone --single-branch --branch desenvolvimento https://github.com/lucasduarte2/CodeWave.git`
-2. `git status` - visualiza as alterações feitas dentro do projeto
-3. `git add .` - adiciona todos os ficheiros modificados
-4. `git commit -m '<mensagem_commit>'` - mensagem do seu commit
-5. `git push` envia as suas alterações para o repositório
-
-Como alternativa, consulte a documentação do GitHub em [Sobre o Git](https://docs.github.com/pt/get-started/using-git/about-git).
+### **Instalação**
+1. Importar a base de dados para o PostgreSQL.
+2. Configurar as credenciais no ficheiro `.env`.
+3. Executar o seguinte comando no terminal:
+   ```
+   git clone https://github.com/sDanielSilva.git
+   ```
+   
+--- 
 
 ## 🤝 Colaboradores
 
